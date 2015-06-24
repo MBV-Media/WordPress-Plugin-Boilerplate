@@ -1,4 +1,4 @@
-<?php
+<?php namespace Admin;
 
 /**
  * The admin-specific functionality of the plugin.

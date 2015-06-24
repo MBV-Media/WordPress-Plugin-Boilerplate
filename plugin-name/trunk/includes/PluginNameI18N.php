@@ -1,4 +1,4 @@
-<?php
+<?php namespace Inc;
 
 /**
  * Define the internationalization functionality

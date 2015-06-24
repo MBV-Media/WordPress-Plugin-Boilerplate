@@ -1,5 +1,9 @@
 <?php
 
+use Inc\SocialMediaPoster;
+use Inc\SocialMediaPosterActivator;
+use Inc\SocialMediaPosterDeactivator;
+
 /**
  * The plugin bootstrap file
  *
@@ -31,10 +35,14 @@ if ( ! defined( 'WPINC' ) ) {
 }
 
 /**
+ * The class responsible for auto loading classes.
+ */
+require_once plugin_dir_path( __FILE__ ) . 'vendor/autoload.php';
+
+/**
  * The code that runs during plugin activation.
  * This action is documented in includes/PluginNameActivator.php
  */
-	require_once plugin_dir_path( __FILE__ ) . 'includes/PluginNameActivator.php';
 function activatePluginName() {
 	PluginNameActivator::activate();
 }
@@ -43,17 +51,10 @@ function activatePluginName() {
  * The code that runs during plugin deactivation.
  * This action is documented in includes/PluginNameDeactivator.php
  */
-	require_once plugin_dir_path( __FILE__ ) . 'includes/PluginNameDeactivator.php';
 function deactivatePluginName() {
 	PluginNameDeactivator::deactivate();
 }
 
-
-/**
- * The core plugin class that is used to define internationalization,
- * admin-specific hooks, and public-facing site hooks.
- */
-require plugin_dir_path( __FILE__ ) . 'includes/PluginName.php';
 register_activation_hook( __FILE__, 'activatePluginName' );
 register_deactivation_hook( __FILE__, 'deactivatePluginName' );
 

@@ -1,4 +1,4 @@
-<?php
+<?php namespace Inc;
 
 /**
  * Fired during plugin deactivation

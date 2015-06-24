@@ -1,4 +1,4 @@
-<?php
+<?php namespace Pub;
 
 /**
  * The public-facing functionality of the plugin.
