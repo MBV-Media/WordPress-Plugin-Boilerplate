@@ -1,7 +1,5 @@
 <?php namespace Inc;
 
-use Inc\PluginNameLoader;
-use Inc\PluginNameI18n;
 use Admin\PluginNameAdmin;
 use Pub\PluginNamePublic;
 
