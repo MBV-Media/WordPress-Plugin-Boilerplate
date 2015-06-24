@@ -34,8 +34,8 @@ if ( ! defined( 'WPINC' ) ) {
  * The code that runs during plugin activation.
  * This action is documented in includes/PluginNameActivator.php
  */
-function activate_plugin_name() {
 	require_once plugin_dir_path( __FILE__ ) . 'includes/PluginNameActivator.php';
+function activatePluginName() {
 	PluginNameActivator::activate();
 }
 
@@ -43,19 +43,19 @@ function activate_plugin_name() {
  * The code that runs during plugin deactivation.
  * This action is documented in includes/PluginNameDeactivator.php
  */
-function deactivate_plugin_name() {
 	require_once plugin_dir_path( __FILE__ ) . 'includes/PluginNameDeactivator.php';
+function deactivatePluginName() {
 	PluginNameDeactivator::deactivate();
 }
 
-register_activation_hook( __FILE__, 'activate_plugin_name' );
-register_deactivation_hook( __FILE__, 'deactivate_plugin_name' );
 
 /**
  * The core plugin class that is used to define internationalization,
  * admin-specific hooks, and public-facing site hooks.
  */
 require plugin_dir_path( __FILE__ ) . 'includes/PluginName.php';
+register_activation_hook( __FILE__, 'activatePluginName' );
+register_deactivation_hook( __FILE__, 'deactivatePluginName' );
 
 /**
  * Begins execution of the plugin.
@@ -66,10 +66,10 @@ require plugin_dir_path( __FILE__ ) . 'includes/PluginName.php';
  *
  * @since    1.0.0
  */
-function run_plugin_name() {
+function runPluginName() {
 
 	$plugin = new PluginName();
 	$plugin->run();
 
 }
-run_plugin_name();
+runPluginName();
