@@ -53,6 +53,15 @@ Note that this will activate the source code of the Boilerplate, but because the
 
 Examples are slated to be added to the [Boilerplate’s website](http://wppb.io) as the site continues to grow.
 
+#### Install dependencies with Composer
+Go into the `plugin-name/trunk` directory and run `composer install`.
+
+**Autoloaded Namespaces (PSR-4)**
+- The `includes/` directory is loaded into the `Inc` namespace
+- The `admin/` directory is loaded into the `Admin` namespace
+- The `public/` directory is loaded into the `Pub` namespace
+- The `lib/` directory is loaded into the `Lib` namespace
+
 ## Recommended Tools
 
 ### i18n Tools
