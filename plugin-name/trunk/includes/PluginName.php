@@ -132,8 +132,8 @@ class PluginName {
 
 		$pluginAdmin = new PluginNameAdmin( $this->getPluginName(), $this->getVersion() );
 
-		$this->loader->addAction( 'admin_enqueue_scripts', $pluginAdmin, 'enqueue_styles' );
-		$this->loader->addAction( 'admin_enqueue_scripts', $pluginAdmin, 'enqueue_scripts' );
+		$this->loader->addAction( 'admin_enqueue_scripts', $pluginAdmin, 'enqueueStyles' );
+		$this->loader->addAction( 'admin_enqueue_scripts', $pluginAdmin, 'enqueueScripts' );
 
 	}
 
