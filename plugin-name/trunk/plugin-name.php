@@ -1,8 +1,8 @@
 <?php
 
-use Inc\SocialMediaPoster;
-use Inc\SocialMediaPosterActivator;
-use Inc\SocialMediaPosterDeactivator;
+use Inc\PluginName;
+use Inc\PluginNameActivator;
+use Inc\PluginNameDeactivator;
 
 /**
  * The plugin bootstrap file
