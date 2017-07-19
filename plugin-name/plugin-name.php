@@ -1,5 +1,9 @@
 <?php
 
+use Inc\PluginName;
+use Inc\PluginNameActivator;
+use Inc\PluginNameDeactivator;
+
 /**
  * The plugin bootstrap file
  *
@@ -10,7 +14,7 @@
  *
  * @link              http://example.com
  * @since             1.0.0
- * @package           Plugin_Name
+ * @package           PluginName
  *
  * @wordpress-plugin
  * Plugin Name:       WordPress Plugin Boilerplate
@@ -31,31 +35,21 @@ if ( ! defined( 'WPINC' ) ) {
 }
 
 /**
- * The code that runs during plugin activation.
- * This action is documented in includes/class-plugin-name-activator.php
+ * The class responsible for auto loading classes.
  */
-function activate_plugin_name() {
-	require_once plugin_dir_path( __FILE__ ) . 'includes/class-plugin-name-activator.php';
-	Plugin_Name_Activator::activate();
-}
+require_once plugin_dir_path( __FILE__ ) . 'vendor/autoload.php';
+
+/**
+ * The code that runs during plugin activation.
+ * This action is documented in includes/PluginNameActivator.php
+ */
+register_activation_hook( __FILE__, array( PluginNameActivator::class, 'activate' ) );
 
 /**
  * The code that runs during plugin deactivation.
- * This action is documented in includes/class-plugin-name-deactivator.php
+ * This action is documented in includes/PluginNameDeactivator.php
  */
-function deactivate_plugin_name() {
-	require_once plugin_dir_path( __FILE__ ) . 'includes/class-plugin-name-deactivator.php';
-	Plugin_Name_Deactivator::deactivate();
-}
-
-register_activation_hook( __FILE__, 'activate_plugin_name' );
-register_deactivation_hook( __FILE__, 'deactivate_plugin_name' );
-
-/**
- * The core plugin class that is used to define internationalization,
- * admin-specific hooks, and public-facing site hooks.
- */
-require plugin_dir_path( __FILE__ ) . 'includes/class-plugin-name.php';
+register_deactivation_hook( __FILE__, array( PluginNameDeactivator::class, 'deactivate' ) );
 
 /**
  * Begins execution of the plugin.
@@ -66,10 +60,4 @@ require plugin_dir_path( __FILE__ ) . 'includes/class-plugin-name.php';
  *
  * @since    1.0.0
  */
-function run_plugin_name() {
-
-	$plugin = new Plugin_Name();
-	$plugin->run();
-
-}
-run_plugin_name();
+PluginName::run();
