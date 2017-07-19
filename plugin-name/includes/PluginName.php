@@ -154,15 +154,6 @@ class PluginName {
 	}
 
 	/**
-	 * Run the loader to execute all of the hooks with WordPress.
-	 *
-	 * @since    1.0.0
-	 */
-	public function run() {
-		$this->loader->run();
-	}
-
-	/**
 	 * The name of the plugin used to uniquely identify it within the context of
 	 * WordPress and to define internationalization functionality.
 	 *
@@ -192,5 +183,15 @@ class PluginName {
 	public function getVersion() {
 		return $this->version;
 	}
+
+    /**
+     * Run the loader to execute all of the hooks with WordPress.
+     *
+     * @since    1.0.0
+     */
+    public static function run() {
+        $plugin = new self();
+        $plugin->loader->run();
+    }
 
 }

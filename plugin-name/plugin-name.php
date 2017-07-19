@@ -43,20 +43,13 @@ require_once plugin_dir_path( __FILE__ ) . 'vendor/autoload.php';
  * The code that runs during plugin activation.
  * This action is documented in includes/PluginNameActivator.php
  */
-function activatePluginName() {
-	PluginNameActivator::activate();
-}
+register_activation_hook( __FILE__, array( PluginNameActivator::class, 'activate' ) );
 
 /**
  * The code that runs during plugin deactivation.
  * This action is documented in includes/PluginNameDeactivator.php
  */
-function deactivatePluginName() {
-	PluginNameDeactivator::deactivate();
-}
-
-register_activation_hook( __FILE__, 'activatePluginName' );
-register_deactivation_hook( __FILE__, 'deactivatePluginName' );
+register_deactivation_hook( __FILE__, array( PluginNameDeactivator::class, 'deactivate' ) );
 
 /**
  * Begins execution of the plugin.
@@ -67,10 +60,4 @@ register_deactivation_hook( __FILE__, 'deactivatePluginName' );
  *
  * @since    1.0.0
  */
-function runPluginName() {
-
-	$plugin = new PluginName();
-	$plugin->run();
-
-}
-runPluginName();
+PluginName::run();
