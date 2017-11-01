@@ -2,7 +2,6 @@
   "require": {},
   "autoload": {
     "psr-4": {
-      "Inc\\": "includes",
       "Admin\\": "admin/",
       "Pub\\": "public/",
       "Lib\\": "lib/"

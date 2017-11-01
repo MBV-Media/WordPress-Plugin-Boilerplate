@@ -1,8 +1,8 @@
 <?php
 
-use Inc\PluginName;
-use Inc\PluginNameActivator;
-use Inc\PluginNameDeactivator;
+use Lib\PluginName;
+use Lib\PluginNameActivator;
+use Lib\PluginNameDeactivator;
 
 /**
  * The plugin bootstrap file

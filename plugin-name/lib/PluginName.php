@@ -1,4 +1,4 @@
-<?php namespace Inc;
+<?php namespace Lib;
 
 use Admin\PluginNameAdmin;
 use Pub\PluginNamePublic;
