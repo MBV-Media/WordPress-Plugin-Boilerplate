@@ -73,7 +73,7 @@ class PluginNamePublic {
 		 * class.
 		 */
 
-		wp_enqueue_style( $this->pluginName, plugin_dir_url( __FILE__ ) . 'css/plugin-name-public.css', array(), $this->version, 'all' );
+		wp_enqueue_style( $this->pluginName, plugin_dir_url( __FILE__ ) . 'css/plugin-name-public.css', [], $this->version, 'all' );
 
 	}
 
@@ -96,7 +96,7 @@ class PluginNamePublic {
 		 * class.
 		 */
 
-		wp_enqueue_script( $this->pluginName, plugin_dir_url( __FILE__ ) . 'js/plugin-name-public.js', array( 'jquery' ), $this->version, false );
+		wp_enqueue_script( $this->pluginName, plugin_dir_url( __FILE__ ) . 'js/plugin-name-public.js', [ 'jquery' ], $this->version, false );
 
 	}
 

@@ -32,8 +32,8 @@ use PluginName\Lib\PluginNameDeactivator;
  */
 
 // If this file is called directly, abort.
-if ( ! defined( 'WPINC' ) ) {
-	die;
+if ( !defined( 'WPINC' ) ) {
+    die;
 }
 
 /**
@@ -45,13 +45,13 @@ require_once plugin_dir_path( __FILE__ ) . 'vendor/autoload.php';
  * The code that runs during plugin activation.
  * This action is documented in includes/PluginNameActivator.php
  */
-register_activation_hook( __FILE__, array( PluginNameActivator::class, 'activate' ) );
+register_activation_hook( __FILE__, [ PluginNameActivator::class, 'activate' ] );
 
 /**
  * The code that runs during plugin deactivation.
  * This action is documented in includes/PluginNameDeactivator.php
  */
-register_deactivation_hook( __FILE__, array( PluginNameDeactivator::class, 'deactivate' ) );
+register_deactivation_hook( __FILE__, [ PluginNameDeactivator::class, 'deactivate' ] );
 
 /**
  * Begins execution of the plugin.
