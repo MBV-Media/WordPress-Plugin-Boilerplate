@@ -1,7 +1,7 @@
-<?php namespace Lib;
+<?php namespace PluginName\Lib;
 
-use Admin\PluginNameAdmin;
-use Pub\PluginNamePublic;
+use PluginName\Admin\PluginNameAdmin;
+use PluginName\Pub\PluginNamePublic;
 
 /**
  * The file that defines the core plugin class

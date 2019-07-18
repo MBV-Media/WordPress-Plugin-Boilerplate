@@ -1,4 +1,4 @@
-<?php namespace Lib;
+<?php namespace PluginName\Lib;
 
 /**
  * Define the internationalization functionality

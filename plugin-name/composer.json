@@ -2,9 +2,9 @@
   "require": {},
   "autoload": {
     "psr-4": {
-      "Admin\\": "admin/",
-      "Pub\\": "public/",
-      "Lib\\": "lib/"
+      "PluginName\\Admin\\": "Admin/",
+      "PluginName\\Public\\": "Pub/",
+      "PluginName\\Lib\\": "Lib/"
     }
   }
 }
