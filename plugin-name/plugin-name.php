@@ -36,6 +36,11 @@ if ( !defined( 'WPINC' ) ) {
     die;
 }
 
+define( 'PluginName_VERSION', '1.0.0' );
+
+define( 'PluginName_DIR', str_replace( '\\', '/', __DIR__ ) );
+define( 'PluginName_URL', plugin_dir_url( __FILE__ ) );
+
 /**
  * The class responsible for auto loading classes.
  */
