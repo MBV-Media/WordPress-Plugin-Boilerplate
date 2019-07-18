@@ -1,6 +1,6 @@
 === PluginName ===
-Contributors: (this should be a list of wordpress.org userid's)
-Donate link: http://example.com/
+Contributors: rtowebsites
+Donate link: https://www.rto.de/
 Tags: comments, spam
 Requires at least: 4.9
 Tested up to: 5.2
