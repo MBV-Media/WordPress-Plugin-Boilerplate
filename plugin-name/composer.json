@@ -3,9 +3,7 @@
   "autoload": {
     "psr-4": {
       "PluginName\\" : "./",
-      "Admin\\": "Admin/",
-      "Public\\": "Pub/",
-      "Lib\\": "Lib/"
+      "Pub\\": "Public/"
     }
   }
 }
