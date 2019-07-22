@@ -44,7 +44,7 @@ define( 'PluginName_URL', untrailingslashit( plugin_dir_url( __FILE__ ) ) );
 /**
  * The class responsible for auto loading classes.
  */
-require_once plugin_dir_path( __FILE__ ) . 'vendor/autoload.php';
+require_once PluginName_DIR . '/vendor/autoload.php';
 
 /**
  * The code that runs during plugin activation.
