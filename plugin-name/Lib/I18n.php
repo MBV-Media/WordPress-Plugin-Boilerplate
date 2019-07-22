@@ -10,7 +10,6 @@
  * @since      1.0.0
  *
  * @package    PluginName
- * @subpackage PluginName/Lib
  */
 
 /**
@@ -21,7 +20,6 @@
  *
  * @since      1.0.0
  * @package    PluginName
- * @subpackage PluginName/includes
  * @author     Your Name <email@example.com>
  */
 class I18N {

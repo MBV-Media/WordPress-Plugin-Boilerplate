@@ -7,7 +7,6 @@
  * @since      1.0.0
  *
  * @package    PluginName
- * @subpackage PluginName/public
  */
 
 /**
@@ -17,7 +16,6 @@
  * enqueue the admin-specific stylesheet and JavaScript.
  *
  * @package    PluginName
- * @subpackage PluginName/public
  * @author     Your Name <email@example.com>
  */
 class PluginNamePublic {

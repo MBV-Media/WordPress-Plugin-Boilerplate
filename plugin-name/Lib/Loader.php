@@ -7,7 +7,6 @@
  * @since      1.0.0
  *
  * @package    PluginName
- * @subpackage PluginName/Lib
  */
 
 /**
@@ -18,7 +17,6 @@
  * run function to execute the list of actions and filters.
  *
  * @package    PluginName
- * @subpackage PluginName/includes
  * @author     Your Name <email@example.com>
  */
 class Loader {
