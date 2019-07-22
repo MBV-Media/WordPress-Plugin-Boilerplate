@@ -1,8 +1,10 @@
 <?php
 
-use Lib\PluginName;
-use Lib\PluginNameActivator;
-use Lib\PluginNameDeactivator;
+namespace PluginName;
+
+use PluginName\Lib\PluginName;
+use PluginName\Lib\Activator;
+use PluginName\Lib\Deactivator;
 
 /**
  * The plugin bootstrap file
@@ -30,26 +32,31 @@ use Lib\PluginNameDeactivator;
  */
 
 // If this file is called directly, abort.
-if ( ! defined( 'WPINC' ) ) {
-	die;
+if ( !defined( 'WPINC' ) ) {
+    die;
 }
+
+define( 'PluginName_VERSION', '1.0.0' );
+
+define( 'PluginName_DIR', str_replace( '\\', '/', __DIR__ ) );
+define( 'PluginName_URL', untrailingslashit( plugin_dir_url( __FILE__ ) ) );
 
 /**
  * The class responsible for auto loading classes.
  */
-require_once plugin_dir_path( __FILE__ ) . 'vendor/autoload.php';
+require_once PluginName_DIR . '/vendor/autoload.php';
 
 /**
  * The code that runs during plugin activation.
- * This action is documented in includes/PluginNameActivator.php
+ * This action is documented in Lib/Activator.php
  */
-register_activation_hook( __FILE__, array( PluginNameActivator::class, 'activate' ) );
+register_activation_hook( __FILE__, [ Activator::class, 'activate' ] );
 
 /**
  * The code that runs during plugin deactivation.
- * This action is documented in includes/PluginNameDeactivator.php
+ * This action is documented in Lib/Deactivator.php
  */
-register_deactivation_hook( __FILE__, array( PluginNameDeactivator::class, 'deactivate' ) );
+register_deactivation_hook( __FILE__, [ Deactivator::class, 'deactivate' ] );
 
 /**
  * Begins execution of the plugin.

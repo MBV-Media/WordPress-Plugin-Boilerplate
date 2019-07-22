@@ -9,7 +9,6 @@
  * @since      1.0.0
  *
  * @package    PluginName
- * @subpackage PluginName/public/partials
  */
 ?>
 

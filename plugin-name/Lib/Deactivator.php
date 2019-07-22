@@ -1,4 +1,4 @@
-<?php namespace Lib;
+<?php namespace PluginName\Lib;
 
 /**
  * Fired during plugin deactivation
@@ -7,7 +7,6 @@
  * @since      1.0.0
  *
  * @package    PluginName
- * @subpackage PluginName/includes
  */
 
 /**
@@ -17,10 +16,9 @@
  *
  * @since      1.0.0
  * @package    PluginName
- * @subpackage PluginName/includes
  * @author     Your Name <email@example.com>
  */
-class PluginNameDeactivator {
+class Deactivator {
 
 	/**
 	 * Short Description. (use period)
