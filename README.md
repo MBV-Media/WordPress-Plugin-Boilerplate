@@ -57,10 +57,10 @@ Examples are slated to be added to the [Boilerplate’s website](http://wppb.io)
 Go into the `plugin-name/trunk` directory and run `composer install`.
 
 **Autoloaded Namespaces (PSR-4)**
-- The `includes/` directory is loaded into the `Inc` namespace
-- The `admin/` directory is loaded into the `Admin` namespace
-- The `public/` directory is loaded into the `Pub` namespace
-- The `lib/` directory is loaded into the `Lib` namespace
+- The `Lib/` directory is loaded into the `PluginName\Lib` namespace
+- The `Admin/` directory is loaded into the `PluginName\Admin` namespace
+- The `Public/` directory is loaded into the `PluginName\Pub` namespace
+- Other directories will autoloaded if directory-name matches the namespace
 
 ## Recommended Tools
 
@@ -98,11 +98,11 @@ For reference, [here's a discussion](http://make.wordpress.org/themes/2013/03/04
 
 Note that if you include your own classes, or third-party libraries, there are three locations in which said files may go:
 
-* `plugin-name/includes` is where functionality shared between the admin area and the public-facing parts of the site reside
-* `plugin-name/admin` is for all admin-specific functionality
-* `plugin-name/public` is for all public-facing functionality
+* `plugin-name/Lib` is where functionality shared between the admin area and the public-facing parts of the site reside
+* `plugin-name/Admin` is for all admin-specific functionality
+* `plugin-name/Public` is for all public-facing functionality
 
-Note that previous versions of the Boilerplate did not include `PluginNameLoader` but this class is used to register all filters and actions with WordPress.
+Note that previous versions of the Boilerplate did not include `Loader` but this class is used to register all filters and actions with WordPress.
 
 The example code provided shows how to register your hooks with the Loader class. More information will be provided in the upcoming documentation on the website.
 

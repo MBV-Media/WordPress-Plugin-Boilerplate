@@ -1,4 +1,4 @@
-<?php namespace Lib;
+<?php namespace PluginName\Lib;
 
 /**
  * Register all actions and filters for the plugin
@@ -7,7 +7,6 @@
  * @since      1.0.0
  *
  * @package    PluginName
- * @subpackage PluginName/includes
  */
 
 /**
@@ -18,10 +17,9 @@
  * run function to execute the list of actions and filters.
  *
  * @package    PluginName
- * @subpackage PluginName/includes
  * @author     Your Name <email@example.com>
  */
-class PluginNameLoader {
+class Loader {
 
 	/**
 	 * The array of actions registered with WordPress.
@@ -48,8 +46,8 @@ class PluginNameLoader {
 	 */
 	public function __construct() {
 
-		$this->actions = array();
-		$this->filters = array();
+		$this->actions = [];
+		$this->filters = [];
 
 	}
 
@@ -93,17 +91,17 @@ class PluginNameLoader {
 	 * @param      string               $callback         The name of the function definition on the $component.
 	 * @param      int      Optional    $priority         The priority at which the function should be fired.
 	 * @param      int      Optional    $acceptedArgs    The number of arguments that should be passed to the $callback.
-	 * @return   type                                   The collection of actions and filters registered with WordPress.
+	 * @return   array                                   The collection of actions and filters registered with WordPress.
 	 */
 	private function add( $hooks, $hook, $component, $callback, $priority, $acceptedArgs ) {
 
-		$hooks[] = array(
+		$hooks[] = [
 			'hook'          => $hook,
 			'component'     => $component,
 			'callback'      => $callback,
 			'priority'      => $priority,
 			'acceptedArgs' => $acceptedArgs
-		);
+		];
 
 		return $hooks;
 
@@ -117,11 +115,11 @@ class PluginNameLoader {
 	public function run() {
 
 		foreach ( $this->filters as $hook ) {
-			add_filter( $hook['hook'], array( $hook['component'], $hook['callback'] ), $hook['priority'], $hook['acceptedArgs'] );
+			add_filter( $hook['hook'], [ $hook['component'], $hook['callback'] ], $hook['priority'], $hook['acceptedArgs'] );
 		}
 
 		foreach ( $this->actions as $hook ) {
-			add_action( $hook['hook'], array( $hook['component'], $hook['callback'] ), $hook['priority'], $hook['acceptedArgs'] );
+			add_action( $hook['hook'], [ $hook['component'], $hook['callback'] ], $hook['priority'], $hook['acceptedArgs'] );
 		}
 
 	}

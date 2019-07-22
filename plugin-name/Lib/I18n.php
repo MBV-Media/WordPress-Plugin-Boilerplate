@@ -1,4 +1,4 @@
-<?php namespace Lib;
+<?php namespace PluginName\Lib;
 
 /**
  * Define the internationalization functionality
@@ -10,7 +10,6 @@
  * @since      1.0.0
  *
  * @package    PluginName
- * @subpackage PluginName/includes
  */
 
 /**
@@ -21,10 +20,9 @@
  *
  * @since      1.0.0
  * @package    PluginName
- * @subpackage PluginName/includes
  * @author     Your Name <email@example.com>
  */
-class PluginNameI18n {
+class I18N {
 
 	/**
 	 * The domain specified for this plugin.
