@@ -38,7 +38,7 @@ class PluginName {
 	 *
 	 * @since    1.0.0
 	 * @access   protected
-	 * @var      PluginNameLoader    $loader    Maintains and registers all hooks for the plugin.
+	 * @var      Loader    $loader    Maintains and registers all hooks for the plugin.
 	 */
 	protected $loader;
 
@@ -99,7 +99,7 @@ class PluginName {
 	 */
 	private function loadDependencies() {
 
-		$this->loader = new PluginNameLoader();
+		$this->loader = new Loader();
 
 	}
 
@@ -114,7 +114,7 @@ class PluginName {
 	 */
 	private function setLocale() {
 
-		$pluginI18n = new PluginNameI18n();
+		$pluginI18n = new I18N();
 		$pluginI18n->setDomain( $this->getPluginName() );
 
 		$this->loader->addAction( 'plugins_loaded', $pluginI18n, 'loadPluginTextdomain' );
@@ -167,8 +167,8 @@ class PluginName {
 	/**
 	 * The reference to the class that orchestrates the hooks with the plugin.
 	 *
-	 * @since     1.0.0
-	 * @return    PluginNameLoader    Orchestrates the hooks of the plugin.
+	 * @return    Loader    Orchestrates the hooks of the plugin.
+	 *@since     1.0.0
 	 */
 	public function getLoader() {
 		return $this->loader;

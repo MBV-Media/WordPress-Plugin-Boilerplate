@@ -1,26 +1,26 @@
 <?php namespace PluginName\Lib;
 
 /**
- * Fired during plugin activation
+ * Fired during plugin deactivation
  *
  * @link       http://example.com
  * @since      1.0.0
  *
  * @package    PluginName
- * @subpackage PluginName/includes
+ * @subpackage PluginName/Lib
  */
 
 /**
- * Fired during plugin activation.
+ * Fired during plugin deactivation.
  *
- * This class defines all code necessary to run during the plugin's activation.
+ * This class defines all code necessary to run during the plugin's deactivation.
  *
  * @since      1.0.0
  * @package    PluginName
  * @subpackage PluginName/includes
  * @author     Your Name <email@example.com>
  */
-class PluginNameActivator {
+class Deactivator {
 
 	/**
 	 * Short Description. (use period)
@@ -29,7 +29,7 @@ class PluginNameActivator {
 	 *
 	 * @since    1.0.0
 	 */
-	public static function activate() {
+	public static function deactivate() {
 
 	}
 
