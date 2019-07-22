@@ -71,7 +71,7 @@ class PluginNamePublic {
          * class.
          */
 
-        wp_enqueue_style( $this->pluginName, PluginName_URL . '/css/plugin-name-public.css', [], $this->version, 'all' );
+        wp_enqueue_style( $this->pluginName, PluginName_URL . '/Public/css/plugin-name-public.css', [], $this->version, 'all' );
 
     }
 
@@ -94,7 +94,7 @@ class PluginNamePublic {
          * class.
          */
 
-        wp_enqueue_script( $this->pluginName, PluginName_URL . '/js/plugin-name-public.js', [ 'jquery' ], $this->version, false );
+        wp_enqueue_script( $this->pluginName, PluginName_URL . '/Public/js/plugin-name-public.js', [ 'jquery' ], $this->version, false );
 
     }
 
