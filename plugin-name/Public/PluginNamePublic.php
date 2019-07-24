@@ -71,7 +71,7 @@ class PluginNamePublic {
          * class.
          */
 
-        wp_enqueue_style( $this->pluginName, PluginName_URL . '/Public/css/plugin-name-public.css', [], $this->version, 'all' );
+        wp_enqueue_style( $this->pluginName, PluginName_URL . '/Public/css/plugin-name-public.min.css', [], $this->version, 'all' );
 
     }
 
