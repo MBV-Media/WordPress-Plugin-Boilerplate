@@ -71,7 +71,7 @@ class PluginNameAdmin {
          * class.
          */
 
-        wp_enqueue_style( $this->pluginName, PluginName_URL . '/Admin/css/plugin-name-admin.css', [], $this->version, 'all' );
+        wp_enqueue_style( $this->pluginName, PluginName_URL . '/Admin/css/plugin-name-admin.min.css', [], $this->version, 'all' );
 
     }
 
