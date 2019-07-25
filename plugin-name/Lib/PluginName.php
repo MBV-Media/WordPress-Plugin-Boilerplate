@@ -112,7 +112,7 @@ class PluginName {
 	 */
 	private function setLocale() {
 
-		$pluginI18n = new I18N();
+		$pluginI18n = new I18n();
 		$pluginI18n->setDomain( $this->getPluginName() );
 
 		$this->loader->addAction( 'plugins_loaded', $pluginI18n, 'loadPluginTextdomain' );
