@@ -22,7 +22,7 @@
  * @package    PluginName
  * @author     Your Name <email@example.com>
  */
-class I18N {
+class I18n {
 
 	/**
 	 * The domain specified for this plugin.
