@@ -361,6 +361,7 @@ exports.devCompileSassPublic = devCompileSassPublic;
 // Other tasks executable over this gulp file
 exports.prodClearDestDir = prodClearDestDir;
 exports.prodBuild = prodBuild;
+exports.devBuild = devBuild;
 exports.prodCopy = prodCopy;
 exports.watch = watch;
 
